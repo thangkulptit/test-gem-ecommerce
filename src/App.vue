@@ -16,9 +16,9 @@
 </template>
 
 <script lang="ts" setup>
-import StepperInput from './components/StepperInput.vue';
-import TextItem from "./components/TextItem.vue";
-import ButtonGroup from "./components/ButtonGroup.vue";
+import StepperInput from '@/components/StepperInput.vue';
+import TextItem from "@/components/TextItem.vue";
+import ButtonGroup from "@/components/ButtonGroup.vue";
 import { reactive } from "vue"
 
 enum Unit {
