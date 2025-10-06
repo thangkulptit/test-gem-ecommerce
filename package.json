@@ -8,7 +8,7 @@
     "preview": "vite preview",
     "test": "vitest",
     "build": "cross-env MODE=production && vue-tsc -b && vite build",
-    "deploy": "cross-env MODE=deploy && vue-tsc -b && vite build && gh-pages -d dist && powershell -Command \\\"git push origin `git subtree split --prefix dist master`:gh-pages --force\\\""
+    "deploy": "cross-env MODE=deploy && vue-tsc -b && vite build && gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.6",

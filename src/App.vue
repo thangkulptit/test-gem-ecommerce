@@ -6,7 +6,7 @@
     <div className="bg-neutral-800 p-4 rounded-lg w-4xl h-80 flex">
       <div className="bg-neutral-950 w-[280px] p-[16px]">
         <TextItem label="Unit">
-          <ButtonGroup class="w-[140px]" :buttons="buttonDatas" v-model="form.unit" />
+          <ButtonGroup :buttons="buttonDatas" v-model="form.unit" />
         </TextItem>
         <TextItem class="mt-[16px]" label="Value">
           <StepperInput v-model="form.value" :unit="form.unit" />
