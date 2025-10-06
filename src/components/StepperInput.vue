@@ -126,6 +126,10 @@ const parseInputValue = (val) => {
   let hasDecimal = false
   let startedWithNumber = false
 
+  if (val[0] === '-') {
+    return '0'
+  }
+
   for (let i = 0; i < val.length; i++) {
     const char = val[i]
 
