@@ -21,6 +21,7 @@
     "jsdom": "^26.0.0",
     "typescript": "~5.7.2",
     "vite": "^6.1.0",
+    "vite-svg-loader": "^5.1.0",
     "vitest": "^3.0.5",
     "vue-tsc": "^2.2.0"
   }
