@@ -1,7 +1,8 @@
 <template>
   <div
-      className="w-screen h-screen bg-neutral-950 flex items-center justify-center text-neutral-100"
+      className="w-screen h-screen bg-neutral-950 flex items-center justify-center flex-col text-[#F9F9F9]"
   >
+    <h3 class="text-neutral-100">GEMCOMMERCE TEST</h3>
     <div className="bg-neutral-800 p-4 rounded-lg w-4xl h-80 flex">
       <div className="bg-neutral-950 w-[280px] p-[16px]">
         <TextItem label="Unit">
