@@ -37,8 +37,8 @@ const buttonDatas = [
 ]
 
 const form = reactive({
-  unit: Unit.Pixel,
-  value: '50'
+  unit: Unit.Percent,
+  value: '0'
 })
 
 </script>
