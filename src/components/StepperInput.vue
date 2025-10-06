@@ -152,7 +152,7 @@ const parseInputValue = (val) => {
 
 const onFocus = () => {
   isFocused.value = true
-  displayValue.value = String(internalValue.value)
+  displayValue.value = String(parseFloat(internalValue.value))
 }
 
 const onInput = (e) => {
@@ -202,9 +202,15 @@ const outHoverInput = () => {
   isHoverInput.value = false
 }
 
+const roundNumber = (num, decimals = 6) => {
+  const factor = Math.pow(10, decimals)
+  return Math.round(num * factor) / factor
+}
+
 const decrement = () => {
   if (internalValue.value <= minValue) return
-  const newVal = Math.max(internalValue.value - props.step, minValue)
+  let newVal = internalValue.value - props.step
+  newVal = roundNumber(Math.max(newVal, minValue))
   hasValidValue.value = true
   internalValue.value = newVal
   displayValue.value = String(newVal)
@@ -214,7 +220,8 @@ const decrement = () => {
 
 const increment = () => {
   if (internalValue.value >= maxValue.value) return
-  const newVal = Math.min(internalValue.value + props.step, maxValue.value)
+  let newVal = internalValue.value + props.step
+  newVal = roundNumber(Math.min(newVal, maxValue.value))
   hasValidValue.value = true
   internalValue.value = newVal
   displayValue.value = String(newVal)
